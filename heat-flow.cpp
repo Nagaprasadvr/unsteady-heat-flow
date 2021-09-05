@@ -1,7 +1,7 @@
 #include <iostream>
 #include <math.h>
-#include "matplotlibcpp.h"
-namespace plt=matplotlibcpp;
+
+
 using namespace std;
 const float alpha=0.0025;
 
@@ -51,7 +51,7 @@ int main()
     {
         for(n=0;n<=10;n=n+1)
         {
-            cout<<tmp[21][m][n]<<"\t";
+            cout<<tmp[20][m][n]<<"\t";
         }
         cout<<"\n\n\n";
     } 
