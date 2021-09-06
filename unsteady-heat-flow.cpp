@@ -1,6 +1,6 @@
 #include <iostream>
 #include <math.h>
-
+#include <fstream>
 
 using namespace std;
 const float alpha=0.0025; //diffusibility  coefficient assumed as 0.0025
@@ -54,13 +54,21 @@ if(time>0)             // time evolution of the system
       
 }
 }
+ofstream file;
+file.open("heat-flow.dat-5-sec.dat",ios::app);
 
+i=0;j=0;
  for(m=0;m<=10;m=m+1)
-    {
+    {   j=0;
         for(n=0;n<=10;n=n+1)
         {
             cout<<tmp[m][n]<<"\t"; // displaying the grid
+            file<<i<<"\t"<<j<<"\t"<<tmp[m][n]<<endl; //writing data to file for plotting
+            j=j+0.1;
         }
+        file<<"\n";
+
+i=i+0.1;
         cout<<"\n\n\n";
     } 
 }
