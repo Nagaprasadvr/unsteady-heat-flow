@@ -44,7 +44,7 @@ if(time>0)             // time evolution of the system
         {
           if(m!=0 && n!=0 && m!=10 && n!=10)  
           {
-          tmp[m][n]=alpha/0.01*(tmp[m+1][n]-2*tmp[m][n]+tmp[m-1][n]+tmp[m][n+1]-2*tmp[m][n]+tmp[m][n-1])+tmp[m][n];
+          tmp[m][n]=alpha/0.01*(tmp[m+1][n]-2*tmp[m][n]+tmp[m-1][n]+tmp[m][n+1]-2*tmp[m][n]+tmp[m][n-1])+tmp[m][n]; //pde is solved using finite difference numerical approximation method
           // dynamically changing the grid with time evolution
           }
           else 
@@ -55,7 +55,7 @@ if(time>0)             // time evolution of the system
 }
 }
 ofstream file;
-file.open("heat-flow.dat-5-sec.dat",ios::app);
+file.open("heat-flow-50-sec.dat",ios::app);
 
 i=0;j=0;
  for(m=0;m<=10;m=m+1)
