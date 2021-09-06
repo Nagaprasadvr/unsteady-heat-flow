@@ -18,7 +18,7 @@ int main()
         j=0;
         for(n=0;n<=10;n=n+1)
         {
-            if(pow((i-0.5),2)+pow((j-0.5),2)<0.2)  // iniside the circle
+            if(pow((i-0.5),2)+pow((j-0.5),2)<0.2)  // inside the circle
             {
                 tmp[m][n]=40;           
             }
